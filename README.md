@@ -1,21 +1,26 @@
-Game Engine Black Book: Doom
+# Game Engine Black Book: Doom
 
 This is the source code for the Game Engine Black Book: Doom.
 I am releasing the source code (.tex) under GPL license. I
 retain ownership of all drawings and only provide them so the
 overall thing is compilable.
 
-To compile:
- - Install mactex library (for pdflatex)
- - Install Inkscape
- - run ./make.sh
+To compile on Mac OS X:
+ - Install Inkscape:
+    - via installer: https://inkscape.org/download/
+    - or via Homebrew: `brew cask install xquartz inkscape`
+ - Install MacTeX library (for epstopdf and pdflatex):
+    - via installer: https://tug.org/mactex/mactex-download.html
+    - or via Homebrew, with GUI:    `brew cask install mactex`
+    - or via Homebrew, without GUI: `brew cask install mactex-no-gui`
+ - Run:
+    - `./make.sh`
 
-Note this has only been tested on MacOS X. You will need to adjust the
-build script a little bit and probably fix case-sensitive path on Linux
-but I believe it should work with minimal work.
-
-Debian GNU/Linux dependencies:
- - `sudo apt install inkscape texlive texlive-font-utils texlive-latex-extra`
+To compile on Debian GNU/Linux and derivatives (Ubuntu):
+ - Install Inkscape and TeX Live library (for epstopdf and pdflatex):
+    - `sudo apt install inkscape texlive texlive-font-utils texlive-latex-extra`
+ - Run:
+    - `./make.sh`
 
 To speed up compilation:
  - Use 100 DPI commands in src/mystyle.sty
@@ -23,4 +28,4 @@ To speed up compilation:
   
 The PDF version looks nicer when cover.tex is included in src/book.tex.
 
-- Fabien Sanglard
+_Fabien Sanglard_
